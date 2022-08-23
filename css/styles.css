@@ -1,0 +1,526 @@
+:root {
+    --primary-font-text: 'Roboto',
+        sans-serif;
+    --secondary-font-text: 'Raleway',
+        sans-serif;
+    --logo-color: #2196F3;
+    --border-color:#ECECEC;
+    --logo-color-light-background: #000000;
+    --logo-color-dark-background: #FFFFFF;
+    --primary-color-text: #212121;
+    --secondary-color-text: #757575;
+    --text-color-dark-background: #FFFFFF;
+    --active-color-hover-focus: #2196F3;
+    --active-color-hover-focus-btn: #2196F380;
+    --primary-background-color: #FFFFFF;
+    --secondary-background-color: #2F303A;
+    --background-color-individual-sections: #F5F4FA;
+    --contacts-color-text: rgba(255, 255, 255, 0.6);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul, ol{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: var(--primary-font-text);
+    background-color: var(--primary-background-color);
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+
+/* ======= Pege header ======== */
+
+.page-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pege-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo-dark {
+    margin-right: 93px;
+
+    font-family: var(--secondary-font-text);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--logo-color-light-background);
+}
+
+.logo {
+    color: var(--logo-color);
+}
+
+.menu,
+.contacts {
+    display: flex;
+}
+
+.menu .menu-nav {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.menu-item:not(:last-child),
+.contacts-item-header:not(:last-child) {
+    margin-right: 50px;
+}
+
+.menu-nav {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-color-text);
+}
+
+.menu-nav:hover,
+.menu-nav:focus {
+    color: var(--active-color-hover-focus);
+}
+
+.menu-nav.current {
+    color: var(--active-color-hover-focus);
+}
+
+.contacts{
+    margin-left: auto;
+}
+
+.contact-mail-address,
+.contact-phone-number {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color-text);
+    display: block;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+}
+
+.contact-mail-address::before {
+    content: '';
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;   
+    background-color: tomato;
+
+    background-image: url(../images/icons.svg/envelope.svg);
+    background-size: contain;
+    background-position: center;
+}
+
+.contact-phone-number::before
+
+.contact-mail-address:hover,
+.contact-mail-address:focus,
+.contact-phone-number:hover,
+.contact-phone-number:focus {
+    color: var(--active-color-hover-focus);
+}
+
+/* ======= /Pege header ======== */
+
+
+/* ======== Main Content ===========*/
+
+/* ======= settion hero =========*/
+
+.section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    background: var(--secondary-background-color);
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/background-img/background-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title-page {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-color-dark-background);
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.modele-open-btn {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    color: var(--text-color-dark-background);
+    background-color: var(--active-color-hover-focus);
+    border-radius: 4px;
+    border-color: transparent;
+    margin: 0 auto;
+
+    padding: 10px 32px;
+
+}
+
+.modele-open-btn:hover,
+.modele-open-btn:focus {
+    background-color: var(--active-color-hover-focus-btn);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* ======= /settion hero =========*/
+
+/* ======= WebStudio features =========*/
+
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-color-text);
+
+    margin-bottom: 50px;
+}
+
+.work-features-items {
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 30px;
+}
+
+.work-features-items .work-features-item {
+    width: 270px;
+}
+
+.work-features-item .work-features-title {
+margin-bottom: 10px;
+}
+
+.work-features-item::before {
+    display: block;
+    content: '';
+    height: 120px;
+    margin-bottom: 30px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+}
+
+.icon-antenna::before {
+    background-image: url(../images/icons.svg/antenna.svg);
+}
+
+.icon-clock::before {
+    background-image: url(../images/icons.svg/clock.svg);
+}
+
+.icon-diagram::before {
+    background-image: url(../images/icons.svg/diagram.svg);
+}
+
+.icon-astronaut::before {
+    background-image: url(../images/icons.svg/astronaut.svg);
+}
+
+.work-features-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-color-text);
+}
+
+.work-features-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color-text);
+}
+
+/* ======= /WebStudio features =========*/
+
+/* ======== Job WebStudio ============ */
+.job-section {
+    padding-top: 0;
+}
+
+.items-job {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* ======== / Job WebStudio ============ */
+
+/* ========== Our team ==========*/
+
+.section-team {
+    background-color: var(--background-color-individual-sections);
+}
+
+.items-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;    
+}
+
+.item-team {
+    background: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.name-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-color-text);
+
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.prof-text {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color-text);
+
+    padding-bottom: 30px;
+}
+
+/* ========== / Our team ==========*/
+
+/* ============ Regular castomers ============ */
+
+
+
+/* ============ / Regular castomers ============ */
+
+/* =======Footer page =========*/
+.footer-page {
+    background: var(--secondary-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.logo-light {
+    font-family: var(--secondary-font-text);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--logo-color-dark-background);
+
+    margin-bottom: 20px;
+}
+
+.contacts-items .contacts-item:not(:last-child) {
+margin-bottom: 9px;
+}
+
+.contacts-item,
+.contacts-address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-color-dark-background);
+}
+
+.contacts-mail,
+.contacts-phone {
+    color: var(--contacts-color-text);
+}
+
+.contacts-address:hover,
+.contacts-address:focus,
+.contacts-mail:hover,
+.contacts-mail:focus,
+.contacts-phone:hover,
+.contacts-phone:focus {
+    color: var(--active-color-hover-focus);
+}
+
+.footer-title-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* ======= / Footer page =========*/
+
+/* ======= main portfolio content =========*/
+
+.portfolio-container {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.portfolio-title,
+.project-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-color-text);
+}
+
+.portfolio-btn-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.selection-btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    color: var(--primary-color-text);
+    background: var(--background-color-individual-sections);
+    border-radius: 4px;
+    border-color: transparent;
+    padding: 6px 22px;
+
+}
+
+.selection-btn:hover,
+.selection-btn:focus {
+    color: var(--text-color-dark-background);
+    background: var(--active-color-hover-focus);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.items-job-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.item-job-portfolio {
+    width: 370px;
+}
+
+.container-job-portfolio {
+    border: 1px solid var(--border-color);
+    border-top: 0px;
+    padding: 20px 24px;
+}
+
+.name-work {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+    color: var(--primary-color-text);
+    margin-bottom: 4px;
+}
+
+.type-work {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color-text);
+}
+
+/* ======= / main portfolio content =========*/
