@@ -5,6 +5,7 @@
         sans-serif;
     --logo-color: #2196F3;
     --border-color:#ECECEC;
+    --icon-color-light-background:#AFB1B8;
     --logo-color-light-background: #000000;
     --logo-color-dark-background: #FFFFFF;
     --primary-color-text: #212121;
@@ -149,31 +150,26 @@ body {
 
 .contact-mail-address,
 .contact-phone-number {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--secondary-color-text);
-    display: block;
-    align-items: center;
+    color: var(--secondary-color-text); 
     padding-top: 32px;
     padding-bottom: 32px;
     
 }
 
-.contact-mail-address::before {
-    content: '';
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;   
-    background-color: tomato;
-
-    background-image: url(../images/icons.svg/envelope.svg);
-    background-size: contain;
-    background-position: center;
+.contact-mail-address .icon-contacts,
+.contact-phone-number .icon-contacts {
+    margin-right: 10px;
 }
 
-.contact-phone-number::before
+.icon-contacts {    
+    fill: currentColor;
+}
 
 .contact-mail-address:hover,
 .contact-mail-address:focus,
@@ -370,12 +366,61 @@ margin-bottom: 10px;
     letter-spacing: 0.03em;
     color: var(--secondary-color-text);
 
-    padding-bottom: 30px;
+    margin-bottom: 16px;
 }
+
+.items-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding-bottom: 30px;
+    gap: 10px;
+}
+
+.link-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--icon-color-light-background);  
+}
+
+.link-social:hover {
+    background-color: var(--active-color-hover-focus);
+    fill: var(--logo-color-dark-background)
+}
+
+
+
 
 /* ========== / Our team ==========*/
 
 /* ============ Regular castomers ============ */
+
+.items-company {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.link-company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    fill: var(--icon-color-light-background);
+    border: 1px solid var(--icon-color-light-background);
+    border-radius: 4px;
+}
+
+.link-company:hover{
+    fill: var(--active-color-hover-focus);
+    border: 1px solid var(--active-color-hover-focus)   
+}
+
 
 
 
@@ -439,6 +484,7 @@ margin-bottom: 9px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 20px;
 }
 
 /* ======= / Footer page =========*/
