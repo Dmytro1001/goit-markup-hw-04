@@ -201,8 +201,9 @@ margin-right: 10px;
     padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--hero-background-color);
-    align-items: center;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/background-img/background-hero.jpg);
     background-repeat: no-repeat;
