@@ -5,7 +5,6 @@
         sans-serif;
     --logo-color: #2196F3;
     --border-color:#ECECEC;
-    --icon-color-light-background:#AFB1B8;
     --logo-color-light-background: #000000;
     --logo-color-dark-background: #FFFFFF;
     --primary-color-text: #212121;
@@ -15,8 +14,11 @@
     --active-color-hover-focus-btn: #2196F380;
     --primary-background-color: #FFFFFF;
     --secondary-background-color: #2F303A;
+    --hero-background-color: #C4C4C4;
     --background-color-individual-sections: #F5F4FA;
     --contacts-color-text: rgba(255, 255, 255, 0.6);
+    --primery-icon-color: #AFB1B8;
+    --background-color-icon-dark: rgba(255, 255, 255, 0.1);
 }
 
 h1,
@@ -150,25 +152,34 @@ body {
 
 .contact-mail-address,
 .contact-phone-number {
-    display: flex;
-    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--secondary-color-text); 
+    color: var(--secondary-color-text);
     padding-top: 32px;
     padding-bottom: 32px;
-    
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-.contact-mail-address .icon-contacts,
-.contact-phone-number .icon-contacts {
-    margin-right: 10px;
+.contact-mail-icon,
+.contact-phone-icon {
+fill: currentColor;
+margin-right: 10px;
 }
 
-.icon-contacts {    
-    fill: currentColor;
+.contact-mail-icon {
+    width: 16px;
+    height: 12px;
+
+}
+
+.contact-phone-icon {
+    width: 10px;
+    height: 16px;
 }
 
 .contact-mail-address:hover,
@@ -190,14 +201,13 @@ body {
     padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
-    background: var(--secondary-background-color);
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
+    background-color: var(--hero-background-color);
+    align-items: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/background-img/background-hero.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 }
 
 .title-page {
@@ -270,32 +280,21 @@ body {
 margin-bottom: 10px;
 }
 
-.work-features-item::before {
-    display: block;
-    content: '';
+.features-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
     height: 120px;
     margin-bottom: 30px;
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
+    background-color: var(--background-color-individual-sections);
     border-radius: 4px;
+
 }
 
-.icon-antenna::before {
-    background-image: url(../images/icons.svg/antenna.svg);
-}
-
-.icon-clock::before {
-    background-image: url(../images/icons.svg/clock.svg);
-}
-
-.icon-diagram::before {
-    background-image: url(../images/icons.svg/diagram.svg);
-}
-
-.icon-astronaut::before {
-    background-image: url(../images/icons.svg/astronaut.svg);
+.features-icon {
+    width: 70px;
+    height: 70px;
 }
 
 .work-features-title {
@@ -347,6 +346,16 @@ margin-bottom: 10px;
     border-radius: 0px 0px 4px 4px;
 }
 
+.team-container{
+    display: flex;
+    flex-direction: column;
+
+    width: 270px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
 .name-title {
     font-weight: 500;
     font-size: 16px;
@@ -355,7 +364,6 @@ margin-bottom: 10px;
     letter-spacing: 0.03em;
     color: var(--primary-color-text);
 
-    padding-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -367,64 +375,75 @@ margin-bottom: 10px;
     color: var(--secondary-color-text);
 
     margin-bottom: 16px;
+
 }
 
-.items-social {
+.social-link-items {
     display: flex;
     justify-content: center;
-    align-items: center;    
-    padding-bottom: 30px;
-    gap: 10px;
+    align-items: center;
+    column-gap: 10px;
 }
 
-.link-social {
+.social-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    fill: var(--icon-color-light-background);  
+    color: var(--primery-icon-color);
 }
 
-.link-social:hover {
+.social-logo {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
     background-color: var(--active-color-hover-focus);
-    fill: var(--logo-color-dark-background)
+    color: var(--text-color-dark-background);
 }
-
-
-
 
 /* ========== / Our team ==========*/
 
-/* ============ Regular castomers ============ */
+/* ========== Regular Customers =============*/
 
-.items-company {
+.clients-items {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
 }
 
-.link-company {
+.company-link {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 170px;
     height: 92px;
-    fill: var(--icon-color-light-background);
-    border: 1px solid var(--icon-color-light-background);
+    border: 1px solid var(--primery-icon-color);
     border-radius: 4px;
+    color: var(--primery-icon-color);
 }
 
-.link-company:hover{
-    fill: var(--active-color-hover-focus);
-    border: 1px solid var(--active-color-hover-focus)   
+.company-icon {
+    width: 106px;
+    height: 60px;
+    fill:currentColor
+}
+
+.company-link:hover,
+.company-link:focus {
+    color: var(--active-color-hover-focus);
+    border: 1px solid var(--active-color-hover-focus);
 }
 
 
 
-
-/* ============ / Regular castomers ============ */
+/*============ /Regular Customers=============*/
 
 /* =======Footer page =========*/
 .footer-page {
@@ -433,7 +452,15 @@ margin-bottom: 10px;
     padding-bottom: 60px;
 }
 
-.footer-page-container {
+.footer-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+
+}
+
+.contact-information {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -477,14 +504,20 @@ margin-bottom: 9px;
     color: var(--active-color-hover-focus);
 }
 
-.footer-title-link {
+.title-social-link {
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--text-color-dark-background);
+
     margin-bottom: 20px;
+}
+
+.footers-link {
+    background-color: var(--background-color-icon-dark);
+    color: var(--text-color-dark-background)
 }
 
 /* ======= / Footer page =========*/
@@ -545,6 +578,17 @@ margin-bottom: 9px;
 
 .item-job-portfolio {
     width: 370px;
+}
+
+.portfolio-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .container-job-portfolio {
