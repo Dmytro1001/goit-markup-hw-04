@@ -439,7 +439,7 @@ margin-bottom: 10px;
 .company-link:hover,
 .company-link:focus {
     color: var(--active-color-hover-focus);
-    border: 1px solid var(--active-color-hover-focus);
+    border-color: var(--active-color-hover-focus);
 }
 
 
